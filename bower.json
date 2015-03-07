@@ -1,0 +1,29 @@
+{
+  "name": "beaches-restaurant-and-bar",
+  "version": "0.0.0",
+  "authors": [
+    "Owen Hancock <sbvice04@gmail.com>"
+  ],
+  "description": "Restuarant website built with AngularJS on top of Wordpress",
+  "private": true,
+  "main": [
+    "dist/css/beaches.css",
+    "dist/js/beaches.js"
+  ],
+  "ignore": [
+    "src",
+    "Gruntfile.js",
+    "README.md",
+    "package.json",
+    "bower.json",
+    ".jshintrc",
+    ".gitignore"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "angular": "~1.3.0",
+    "angular-route": "~1.3.0"
+  },
+  "devDependencies": {
+  }
+}

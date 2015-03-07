@@ -1,0 +1,329 @@
+@import 'colors.less';
+@import 'mixins.less';
+@imgUrl: '../img/';
+
+header {
+	position: relative;
+	height: 80px;
+	z-index: 1;
+	padding: 24px;
+	background: @lightblack url('@{imgUrl}headerBg.jpg') center center no-repeat;
+
+	.box-shadow(0 8px 0 0px rgba(0, 0, 0, 0.3));
+
+	.logo {
+		display: block;
+		width: 288px;
+		height: 78px;
+		background: transparent url('@{imgUrl}beachesLogo.png') top left no-repeat;
+		.background-size(100%, 100%);
+
+		.transition(all .3s);
+	}
+
+	.menu-button-button {
+		display: none;
+	}
+
+	.nav {
+		label {
+			display: none;
+		}
+		a {
+			text-decoration: none;
+		}
+	}
+
+	.nav-item {
+		display: block;
+		float: left;
+		height: 30px;
+		padding: 0 8px;
+		margin: 0 4px;
+		line-height: 34px;
+		color: #FFF;
+		text-transform: uppercase;
+		font-family: "Letter Gothic STD", "letter-gothic-std", "helvetica-nue", helvetica, arial, sans-serif;
+		cursor: pointer;
+		border: 1px solid transparent;
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&.active {
+			border-color: #FFF;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.main-nav {
+		position: absolute;
+		top: 24px;
+		right: 174px;
+
+		.transition(left .3s);
+	}
+
+	.restaurant-nav {
+		position: absolute;
+		top: 64px;
+		right: 25px;
+
+		.nav-item {
+			height: 27px;
+			padding: 4px 8px;
+			font-size: 26px;
+			// font-family: "Proxima Nova Extra Condensed", "proxima-nova-extra-condensed";
+			border-width: 1px;
+			.transition(all .3s);
+		}
+	}
+
+	.social-nav {
+		position: absolute;
+		top: 25px;
+		right: 25px;
+
+		a {
+			display: block;
+			width: 16px;
+			height: 16px;
+			padding: 7px;
+			margin: 0 0 4px 4px;
+			float: left;
+			cursor: pointer;
+			color: #FFF;
+			font-size: 16px;
+			border: 1px solid #FFF;
+			opacity: .75;
+
+			&:hover {
+				opacity: .95;
+				background: #FFF;
+				color: @lightblack;
+			}
+		}
+	}
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 2)
+{
+	header {
+		.logo {
+			background-image: url('@{imgUrl}beachesLogo@2x.png');
+			.background-size(100%, 100%);
+		}
+	}
+}
+
+/* smaller browser, let's shrink the header */
+@media screen and (max-width: 854px)
+{
+	header {
+		height: 64px;
+
+		.logo {
+			height: 64px;
+			width: 237px;
+		}
+
+		.nav-item {
+			margin: 0;
+		}
+
+		.main-nav {
+			top: 22px;
+			right: 106px;
+		}
+
+		.restaurant-nav {
+			top: 59px;
+			right: 106px;
+
+			.nav-item {
+				height: 21px;
+				font-size: 20px;
+				line-height: 26px;
+			}
+		}
+
+		.social-nav {
+			top: 22px;
+			width: 72px;
+		}
+	}
+}
+
+/* too small for a normal header, so show hamberger style */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px), (max-width: 690px)
+{
+	body {
+		margin-top: 76px;
+	}
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 44px;
+		padding: 16px;
+
+		.logo {
+			height: 42px;
+			width: 154px;
+		}
+
+		.menu-button {
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			display: block;
+			float: right;
+			width: 18px;
+			height: 18px;
+			padding: 11px;
+			font-size: 18px;
+			color: #FFF;
+			cursor: pointer;
+			border: 1px solid #FFF;
+			opacity: .85;
+
+			span {
+				opacity: 1;
+				.transition(opacity 0.3s);
+			}
+
+			.icon-close {
+				position: absolute;
+				top: 11px;
+				right: 11px;
+				opacity: 0;
+			}
+
+			&:hover {
+				opacity: .95;
+			}
+		}
+
+		.overlay {
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: #000;
+			opacity: 0;
+			visibility: hidden;
+
+			.transition(opacity .3s, visibility 0s 0.3s);
+		}
+
+		.nav {
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 0;
+			background: @lightblack;
+			overflow: hidden;
+			.box-shadow(0 0 0 0px rgba(0, 0, 0, 0.3));
+
+			.transition(all .3s);
+
+			> div {
+				position: static;
+				width: 240px;
+				float: right;
+				text-align: center;
+				padding-top: 16px;
+
+				.nav-item {
+					float: none;
+					width: 100px;
+					margin: 0 auto;
+				}
+
+
+				&.restaurant-nav {
+					left: 0;
+					margin-top: 0;
+					.nav-item {
+						width: 140px;
+						padding: 8px 12px;
+					}
+				}
+
+				&.social-nav {
+
+					a {
+						display: inline-block;
+						float: none;
+						font-size: 20px;
+						width: 20px;
+						height: 20px;
+						padding: 10px;
+
+						&:first-child {
+							margin-left: 0;
+						}
+					}
+				}
+
+				&.main-nav {
+					left: 0;
+				}
+			}
+
+			label {
+				display: block;
+				width: 170px;
+				height: 0px;
+				margin: 24px auto;
+				text-align: center;
+				border-top: 4px double #FFF;
+
+				span {
+					display: inline-block;
+					position: relative;
+					top: -14px;
+					padding: 12px;
+					color: #FFF;
+					line-height: 0;
+					background: @lightblack;
+				}
+			}
+		}
+
+		&.showMenu {
+
+			.menu-button {
+				.icon-menu {
+					opacity: 0;
+				}
+				.icon-close {
+					opacity: 1;
+				}
+			}
+
+			.nav {
+				width: 240px;
+				.box-shadow(8px 0 0 0px rgba(0, 0, 0, 0.3));
+			}
+
+			.overlay {
+				visibility: visible;
+				opacity: .5;
+
+				.transition(opacity .3s, visibility 0s 0s);
+			}
+		}
+	}
+}

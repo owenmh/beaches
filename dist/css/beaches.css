@@ -1,0 +1,885 @@
+
+/* reset */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+q,
+small,
+strike,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* font-face icons */
+@font-face {
+  font-family: 'Slim Icons';
+  src: url('../fonts/slim-icons.eot');
+  src: url('../fonts/slim-icons.eot') format('embedded-opentype'), url('../fonts/slim-icons.woff') format('woff'), url('../fonts/slim-icons.ttf') format('truetype'), url('../fonts/slim-icons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'Slim Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-close:before,
+.icon-cross:before {
+  content: "\e600";
+}
+.icon-menu:before {
+  content: "\e601";
+}
+.icon-arrow-left:before {
+  content: "\e602";
+}
+.icon-arrow-right:before {
+  content: "\e603";
+}
+.icon-arrow-up:before {
+  content: "\e604";
+}
+.icon-arrow-down:before {
+  content: "\e605";
+}
+.icon-expand:before,
+.icon-resize-enlarge:before {
+  content: "\e606";
+}
+.icon-search:before {
+  content: "\e607";
+}
+.icon-user:before {
+  content: "\e608";
+}
+.icon-clock:before {
+  content: "\e609";
+}
+.icon-comments:before {
+  content: "\e60a";
+}
+.icon-category:before {
+  content: "\e60b";
+}
+.icon-tag:before {
+  content: "\e60c";
+}
+.icon-refresh:before,
+.icon-cycle:before {
+  content: "\e60d";
+}
+.icon-facebook:before {
+  content: "\e60e";
+}
+.icon-twitter:before {
+  content: "\e60f";
+}
+.icon-googleplus:before {
+  content: "\e610";
+}
+.icon-mail:before {
+  content: "\e611";
+}
+.icon-youtube:before {
+  content: "\e612";
+}
+.icon-pinterest:before {
+  content: "\e613";
+}
+.icon-vimeo:before {
+  content: "\e614";
+}
+.icon-instagram:before {
+  content: "\e615";
+}
+.icon-dribbble:before {
+  content: "\e616";
+}
+.icon-flickr:before {
+  content: "\e617";
+}
+.icon-tumblr:before {
+  content: "\e618";
+}
+.icon-linkedin:before {
+  content: "\e619";
+}
+.icon-github:before {
+  content: "\e61a";
+}
+.icon-skype:before {
+  content: "\e61b";
+}
+.icon-soundcloud:before {
+  content: "\e61c";
+}
+.icon-envato:before {
+  content: "\e61d";
+}
+.icon-location:before {
+  content: "\e61e";
+}
+.icon-phone:before {
+  content: "\e61f";
+}
+.icon-share:before {
+  content: "\e620";
+}
+.icon-play:before {
+  content: "\e621";
+}
+.icon-pause:before {
+  content: "\e622";
+}
+.icon-stop:before {
+  content: "\e623";
+}
+.icon-link:before {
+  content: "\e624";
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  font-size: 13px;
+  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #2b2723;
+}
+
+/**
+ * CSS Stylesheet for the front-end interface for Food and Drink Menu
+ *
+ * @package Food and Drink Menu
+ */
+.fdm-menu.clearfix,
+.fdm-menu .clearfix {
+  clear: both;
+}
+.fdm-menu,
+.fdm-section {
+  margin: 0;
+  padding: 0;
+}
+.fdm-menu,
+.fdm-menu > li,
+.fdm-section,
+.fdm-section > li {
+  list-style: none;
+}
+.fdm-columns-2 .fdm-column {
+  width: 47%;
+  float: left;
+}
+.fdm-menu .fdm-column {
+  margin: 0 3% 0 0;
+}
+.fdm-columns-1 .fdm-column {
+  margin-right: 0;
+}
+.fdm-columns-2 .fdm-column-last {
+  float: right;
+  margin: 0 0 0 3%;
+}
+.fdm-section-header {
+  border-bottom: 1px solid #333;
+}
+.fdm-section-header,
+.fdm-section-header h3,
+.fdm-section-header p,
+.fdm-item-panel,
+.fdm-item-panel p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+.fdm-section-header h3 {
+  margin-bottom: 0.5em;
+}
+.fdm-item {
+  margin-bottom: 2em;
+}
+.fdm-item-panel {
+  position: relative;
+}
+.fdm-item-panel p {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.fdm-item-panel .fdm-item-title {
+  font-weight: bold;
+}
+.fdm-item-has-image .fdm-item-panel p {
+  padding-left: 35%;
+}
+.fdm-item-image {
+  float: left;
+  width: 33%;
+  height: auto;
+}
+.fdm-item-has-price .fdm-item-panel p {
+  padding-right: 20%;
+}
+.fdm-item-price-wrapper {
+  position: absolute;
+  width: 20%;
+  text-align: right;
+  top: 0;
+  right: 0;
+  white-space: nowrap;
+}
+.fdm-item-price:before {
+  content: '$';
+  opacity: .7;
+  font-weight: 200;
+}
+.fdm-menu-footer {
+  font-size: 85%;
+  font-style: italic;
+}
+/**
+ * This media query is pegged to Bootstrap 3's breakpoint
+ *
+ * Edit the max-width to match your responsive site's collapsed columns
+ * breakpoint
+ ********************************************************/
+@media (max-width: 991px) {
+  .fdm-columns-2 .fdm-column {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}
+/**
+ * Fully vertical layout for very small screens
+ **********************************************/
+@media (max-width: 450px) {
+  .fdm-item-image {
+    width: 100%;
+    float: none;
+    margin-bottom: 2em;
+  }
+  .fdm-item-has-image .fdm-item-panel p,
+  .fdm-item-has-price .fdm-item-panel p {
+    padding: 0;
+  }
+  .fdm-item-price-wrapper {
+    text-align: left;
+    white-space: normal;
+    position: relative;
+    margin-bottom: 1em;
+  }
+}
+
+header {
+  position: relative;
+  height: 80px;
+  z-index: 1;
+  padding: 24px;
+  background: #2b2723 url('../img/headerBg.jpg') center center no-repeat;
+  -webkit-box-shadow: 0 8px 0 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 8px 0 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 0 0px rgba(0, 0, 0, 0.3);
+}
+header .logo {
+  display: block;
+  width: 288px;
+  height: 78px;
+  background: transparent url('../img/beachesLogo.png') top left no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header .menu-button-button {
+  display: none;
+}
+header .nav label {
+  display: none;
+}
+header .nav a {
+  text-decoration: none;
+}
+header .nav-item {
+  display: block;
+  float: left;
+  height: 30px;
+  padding: 0 8px;
+  margin: 0 4px;
+  line-height: 34px;
+  color: #FFF;
+  text-transform: uppercase;
+  font-family: "Letter Gothic STD", "letter-gothic-std", "helvetica-nue", helvetica, arial, sans-serif;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+header .nav-item:hover {
+  text-decoration: underline;
+}
+header .nav-item.active {
+  border-color: #FFF;
+}
+header .nav-item.active:hover {
+  text-decoration: none;
+}
+header .nav-item:last-child {
+  margin-right: 0;
+}
+header .main-nav {
+  position: absolute;
+  top: 24px;
+  right: 174px;
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  -ms-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  transition: left 0.3s;
+}
+header .restaurant-nav {
+  position: absolute;
+  top: 64px;
+  right: 25px;
+}
+header .restaurant-nav .nav-item {
+  height: 27px;
+  padding: 4px 8px;
+  font-size: 26px;
+  border-width: 1px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header .social-nav {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+header .social-nav a {
+  display: block;
+  width: 16px;
+  height: 16px;
+  padding: 7px;
+  margin: 0 0 4px 4px;
+  float: left;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 16px;
+  border: 1px solid #FFF;
+  opacity: .75;
+}
+header .social-nav a:hover {
+  opacity: .95;
+  background: #FFF;
+  color: #2b2723;
+}
+@media all and (-webkit-min-device-pixel-ratio: 2) {
+  header .logo {
+    background-image: url('../img/beachesLogo@2x.png');
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+  }
+}
+/* smaller browser, let's shrink the header */
+@media screen and (max-width: 854px) {
+  header {
+    height: 64px;
+  }
+  header .logo {
+    height: 64px;
+    width: 237px;
+  }
+  header .nav-item {
+    margin: 0;
+  }
+  header .main-nav {
+    top: 22px;
+    right: 106px;
+  }
+  header .restaurant-nav {
+    top: 59px;
+    right: 106px;
+  }
+  header .restaurant-nav .nav-item {
+    height: 21px;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  header .social-nav {
+    top: 22px;
+    width: 72px;
+  }
+}
+/* too small for a normal header, so show hamberger style */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 690px) {
+  body {
+    margin-top: 76px;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    padding: 16px;
+  }
+  header .logo {
+    height: 42px;
+    width: 154px;
+  }
+  header .menu-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: block;
+    float: right;
+    width: 18px;
+    height: 18px;
+    padding: 11px;
+    font-size: 18px;
+    color: #FFF;
+    cursor: pointer;
+    border: 1px solid #FFF;
+    opacity: .85;
+  }
+  header .menu-button span {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s;
+    -moz-transition: opacity 0.3s;
+    -ms-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
+  header .menu-button .icon-close {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    opacity: 0;
+  }
+  header .menu-button:hover {
+    opacity: .95;
+  }
+  header .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s, visibility 0s 0.3s;
+    -moz-transition: opacity 0.3s, visibility 0s 0.3s;
+    -ms-transition: opacity 0.3s, visibility 0s 0.3s;
+    -o-transition: opacity 0.3s, visibility 0s 0.3s;
+    transition: opacity 0.3s, visibility 0s 0.3s;
+  }
+  header .nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background: #2b2723;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  header .nav > div {
+    position: static;
+    width: 240px;
+    float: right;
+    text-align: center;
+    padding-top: 16px;
+  }
+  header .nav > div .nav-item {
+    float: none;
+    width: 100px;
+    margin: 0 auto;
+  }
+  header .nav > div.restaurant-nav {
+    left: 0;
+    margin-top: 0;
+  }
+  header .nav > div.restaurant-nav .nav-item {
+    width: 140px;
+    padding: 8px 12px;
+  }
+  header .nav > div.social-nav a {
+    display: inline-block;
+    float: none;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+  }
+  header .nav > div.social-nav a:first-child {
+    margin-left: 0;
+  }
+  header .nav > div.main-nav {
+    left: 0;
+  }
+  header .nav label {
+    display: block;
+    width: 170px;
+    height: 0px;
+    margin: 24px auto;
+    text-align: center;
+    border-top: 4px double #FFF;
+  }
+  header .nav label span {
+    display: inline-block;
+    position: relative;
+    top: -14px;
+    padding: 12px;
+    color: #FFF;
+    line-height: 0;
+    background: #2b2723;
+  }
+  header.showMenu .menu-button .icon-menu {
+    opacity: 0;
+  }
+  header.showMenu .menu-button .icon-close {
+    opacity: 1;
+  }
+  header.showMenu .nav {
+    width: 240px;
+    -webkit-box-shadow: 8px 0 0 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 8px 0 0 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 8px 0 0 0px rgba(0, 0, 0, 0.3);
+  }
+  header.showMenu .overlay {
+    visibility: visible;
+    opacity: .5;
+    -webkit-transition: opacity 0.3s, visibility 0s 0s;
+    -moz-transition: opacity 0.3s, visibility 0s 0s;
+    -ms-transition: opacity 0.3s, visibility 0s 0s;
+    -o-transition: opacity 0.3s, visibility 0s 0s;
+    transition: opacity 0.3s, visibility 0s 0s;
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+}
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* Styles */
+}
+
+
+.background-image {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.background-image img {
+  min-width: 100%;
+  min-height: 100%;
+}
+.page-body {
+  float: right;
+  margin: 30px 20px 20px;
+  padding: 32px;
+  font-size: 16px;
+  background: #FFF;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.page-title {
+  font-weight: bold;
+  font-size: 36px;
+  color: #999;
+  margin-bottom: 24px;
+}
+@media (max-width: 450px) {
+  .page-body {
+    margin: 0;
+  }
+}
+
+.slideshow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.slideshow .slides {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.slideshow .slide {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  -ms-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  transition: left 0.3s;
+}
+.slideshow .slide .slide-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.slideshow .slide .slide-content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 24px 24px 48px;
+  background: #FFF;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+.slideshow .slide .slide-content h3 {
+  margin: 0;
+  color: #666666;
+  font-size: 40px;
+  font-weight: normal;
+}
+.slideshow .slide .slide-content > div {
+  color: #808080;
+  font-size: 18px;
+}
+.slideshow .slide.active {
+  left: 0;
+}
+.slideshow .slide.active ~ .slide {
+  left: 100%;
+}
+.slideshow .slide-nav {
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  right: 0;
+  text-align: center;
+}
+.slideshow .slide-nav a {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  border: 1px solid #4D4D4D;
+  cursor: pointer;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.slideshow .slide-nav a:hover {
+  background: #EEE;
+}
+.slideshow .slide-nav a.active {
+  background: #4D4D4D;
+}
+.slideshow .arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  display: block;
+  padding: 8px;
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  color: #FFF;
+  background: #000;
+  cursor: pointer;
+}
+.slideshow .arrow.left {
+  left: 24px;
+}
+.slideshow .arrow.right {
+  right: 24px;
+}
+.slideshow .arrow.disabled {
+  pointer-events: none;
+  opacity: .5;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 420px) {
+  .slideshow {
+    position: static;
+  }
+  .slideshow .slides {
+    position: static;
+  }
+  .slideshow .slides .slide {
+    position: static;
+  }
+  .slideshow .slides .slide .slide-image {
+    position: relative;
+    height: 100px;
+    margin: 24px;
+    overflow: hidden;
+  }
+  .slideshow .slides .slide .slide-image img {
+    width: 100%;
+    max-width: 320px;
+    min-width: 0;
+  }
+  .slideshow .slides .slide .slide-content {
+    position: static;
+    padding: 0;
+    margin: 24px;
+  }
+  .slideshow .slides .slide .slide-content h3 {
+    font-size: 24px;
+  }
+  .slideshow .arrow,
+  .slideshow .slide-nav {
+    display: none;
+  }
+}

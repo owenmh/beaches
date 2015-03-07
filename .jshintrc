@@ -1,0 +1,23 @@
+{
+  "browser": true,
+  "globalstrict": true,
+  "node": true,
+  "lastsemic": true,
+  "expr": true,
+  "globals": {
+    "angular": true,
+    "$": true,
+    "Q": true,
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "sinon": true,
+    "after": true,
+    "before": true,
+    "afterEach": true,
+    "beforeEach": true,
+    "inject": true,
+    "module": true,
+    "require": true
+  }
+}

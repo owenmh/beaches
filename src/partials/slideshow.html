@@ -1,0 +1,22 @@
+<div class='slideshow'>
+	<div class='slides'>
+		<div class='slide' ng-repeat='slide in slideInfo.slides' ng-class='{active: slideInfo.activeIndex == $index}'>
+			<div class='slide-image'>
+				<img ng-src='{{slide.image}}' />
+			</div>
+			<div class='slide-content'>
+				<h3>{{slide.title}}</h3>
+				<div ng-bind-html='slide.content'></div>
+			</div>
+		</div>
+	</div>
+	<div class='slide-nav'>
+		<a ng-repeat='slide in slideInfo.slides' ng-class='{active: slideInfo.activeIndex == $index}' ng-click='setActiveIndex($index)'></a>
+	</div>
+	<a class='arrow left' ng-click='previous()' ng-class='{disabled: (slideInfo.activeIndex <= 0)}'>
+		<span class='icon-arrow-left'></span>
+	</a>
+	<a class='arrow right' ng-click='next()' ng-class='{disabled: (slideInfo.activeIndex >= slideInfo.slides.length - 1)}'>
+		<span class='icon-arrow-right'></span>
+	</a>
+</div>

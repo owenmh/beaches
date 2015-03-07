@@ -1,0 +1,36 @@
+.background-image {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -1;
+
+	img {
+		min-width: 100%;
+		min-height: 100%;
+	}
+}
+
+.page-body {
+	float: right;
+	margin: 30px 20px 20px;
+	padding: 32px;
+	font-size: 16px;
+	background: #FFF;
+	background-color: rgba(255, 255, 255, .95);
+}
+
+.page-title {
+	font-weight: bold;
+	font-size: 36px;
+	color: #999;
+	margin-bottom: 24px;
+}
+
+@media (max-width: 450px) {
+	.page-body {
+		margin: 0;
+	}
+}
