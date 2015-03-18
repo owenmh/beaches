@@ -1,24 +1,36 @@
 <header ng-class='{showMenu: showMobileMenu}'>
-	<a class='logo' href='#/'></a>
-	<div class='overlay' ng-click='toggleMobileMenu()'></div>
-	<a class='menu-button' ng-click='toggleMobileMenu()'>
-		<span class='icon-menu'></span>
-		<span class='icon-close'></span>
-	</a>
-	<div class='nav'>
+	<div class='navigation'>
 		<div class='main-nav'>
-			<label><span>Site</span></label>
-			<a class='nav-item' ng-repeat='item in navItems.main' ng-href='#/{{item.link}}' ng-class='{active: item.link == currentSection()}'>{{item.label}}</a>
-		</div>
-		<div class='restaurant-nav'>
-			<label><span>Restaurants</span></label>
-			<a class='nav-item' ng-repeat='item in navItems.restaurant'  ng-href='#/{{item.link}}' ng-class='{active: item.link == currentSection()}'>{{item.label}}</a>
-		</div>
-		<div class='social-nav' tabindex="0">
-			<label><span>Social</span></label>
-			<a ng-repeat='item in navItems.social' ng-href='{{item.link}}' target="_blank">
-				<span ng-class='item.icon'></span>
+			<a class='logo' href='#/'></a>
+			<a class='menu-button' ng-click='toggleMobileMenu()'>
+				<span class='icon-menu'></span>
+				<span class='icon-close'></span>
 			</a>
+			<div class='nav'>
+				<a class='nav-item' ng-repeat='item in navItems.main'  ng-href='#/{{item.link}}' ng-class='{active: item.link == currentSection()}'>{{item.label}}</a>
+			</div>
+		</div>
+		<div class='overlay' ng-click='toggleMobileMenu()'></div>
+		<div class='page-nav'>
+			<div class='social-links'>
+				<a class='social-icon' ng-repeat='item in navItems.social' ng-href='{{item.link}}' target="_blank">
+					<span ng-class='item.icon'></span>
+				</a>
+			</div>
+			<div class='menu-nav' ng-if='navItems.menus'>
+				<div class='collapsed-nav' ng-repeat='menu in navItems.menus'>
+					<label class='nav-label'><span>{{menu.title}}</span></label>
+					<a class='nav-item' ng-repeat='section in menu.sections' ng-click='navToMenuSection(section.id)' ng-class='{active: section.id == currentHash()}' ng-section-id='{{section.id}}'>{{section.title}}</a>
+				</div>
+			</div>
+			<div class='collapsed-nav'>
+				<label class='nav-label'><span>About</span></label>
+				<a class='nav-item' ng-repeat='item in navItems.about' ng-href='#/{{item.link}}' target="_blank">{{item.label}}</a>
+			</div>
+			<div class='collapsed-nav'>
+				<label class='nav-label'><span>Contact</span></label>
+				<a class='nav-item' ng-repeat='item in navItems.contact' ng-href='#/{{item.link}}' target="_blank">{{item.label}}</a>
+			</div>
 		</div>
 	</div>
 </header>

@@ -7,7 +7,8 @@
 		'$anchorScroll',
 		'beachesServicesWordpress',
 		'beachesServicesAnchorExtractor',
-		function($sce, $location, $anchorScroll, wordpress, anchorExtractor)
+		'beachesServicesHeader',
+		function($sce, $location, $anchorScroll, wordpress, anchorExtractor, headerService)
 		{
 			return {
 				scope: {
@@ -17,19 +18,15 @@
 				link: function($scope)
 				{
 					angular.extend($scope, {
-						anchors: {},
-						navToAnchor: function(id)
-						{
-							$location.hash(id);
-						    $anchorScroll();
-						}
+						anchors: {}
 					});
 
 					wordpress.getPost($scope.pageId).then(function(page)
 					{
 						var pageContent = angular.element('<div>' + page.content.rendered + '</div>');
 						$scope.page = page;
-						$scope.anchors.menus = anchorExtractor.getMenuLinks($scope.pageId, pageContent);
+						var menuLinks = anchorExtractor.getMenuLinks($scope.pageId, pageContent);
+						headerService.setMenuNavigation(menuLinks);
 						$scope.page.title = $sce.trustAsHtml($scope.page.title.rendered);
 						$scope.page.content = $sce.trustAsHtml(pageContent.html());
 					});

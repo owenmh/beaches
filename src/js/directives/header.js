@@ -2,60 +2,47 @@
 {
 	'use strict';
 	module.directive('beachesDirectivesHeader', [
-		'$route',
-		function($route)
+		'$document',
+		'$rootScope',
+		'beachesServicesHeader',
+		function($document, $rootScope, headerService)
 		{
+			$($document).on('scroll', function(event)
+			{
+			    var scrollPos = $($document).scrollTop();
+			    $('header a.nav-item[ng-click^="navToMenuSection"]').each(function(el)
+			    {
+			    	var section = $(this).attr("ng-section-id");
+			        var refElement = $('#' + section);
+			        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+			            headerService.navToAnchor(section, true);
+			            $rootScope.$apply();
+			        }
+			    });
+			});
+
 			return {
 				templateUrl: 'dist/partials/header.html',
 				link: function($scope)
 				{
 					angular.extend($scope, {
-						navItems:{
-							main: [{
-								label: 'Home',
-								link: 'home'
-							},{
-								label: 'Calendar',
-								link: 'calendar'
-							},{
-								label: 'Community',
-								link: 'community'
-							},{
-								label: 'Gift Cards',
-								link: 'giftcards'
-							}],
-							restaurant: [{
-								label: 'Vancouver',
-								link: 'vancouver'
-							},{
-								label: 'PDX',
-								link: 'pdx'
-							},{
-								label: 'Catering',
-								link: 'catering'
-							}],
-							social: [{
-								icon: 'icon-instagram',
-								link: 'http://instagram.com/beachesrestaurant'
-							},{
-								icon: 'icon-twitter',
-								link: 'https://twitter.com/#!/beachesrandb'
-							},{
-								icon: 'icon-facebook',
-								link: 'http://www.facebook.com/home.php?#!/beachesrestaurantandbar?ref=ts'
-							},{
-								icon: 'icon-phone',
-								link: 'tel:3606991592' //PDX: (503) 335-8385
-							}]
-						},
+						navItems: headerService.navItems,
 						currentSection: function()
 						{
-							return $route.current.section || 'home';
+							return headerService.getCurrentSection();
+						},
+						currentHash: function()
+						{
+							return headerService.getCurrentHash();
 						},
 						showMobileMenu: false,
 						toggleMobileMenu: function()
 						{
 							$scope.showMobileMenu = !$scope.showMobileMenu;
+						},
+						navToMenuSection: function(id)
+						{
+							headerService.navToAnchor(id);
 						}
 					});
 				}

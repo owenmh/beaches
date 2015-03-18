@@ -2,18 +2,6 @@
 	<div class='background-image'>
 		<img ng-src='{{page.featured_image.source}}' />
 	</div>
-	<div class='page-navigation'>
-		<div class='nav-section'>
-			<label class='nav-section-title'>Menu</label>
-			<div class='nav-sub-section' ng-repeat='menu in anchors.menus'>
-				<label class='nav-sub-section-title' ng-click='navToAnchor(menu.id)'>{{menu.title}}</label>
-				<span class='nav-sub-section-link' ng-repeat='section in menu.sections' ng-click='navToAnchor(section.id)'>{{section.title}}</span>
-			</div>
-		</div>
-		<div class='nav-section'>
-			<label class='nav-section-title'>Contact</label>
-		</div>
-	</div>
 	<div class='page-body'>
 		<h1 ng-bind-html='page.title' class='page-title'></h1>
 		<div ng-bind-html='page.content' class='page-content'></div>

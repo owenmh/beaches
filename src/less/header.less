@@ -3,123 +3,152 @@
 @imgUrl: '../img/';
 
 header {
-	position: relative;
-	height: 80px;
-	z-index: 1;
-	padding: 24px;
-	background: @lightblack url('@{imgUrl}headerBg.jpg') center center no-repeat;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 286px;
+	color: #FFF;
+	font-size: 16px;
+	font-family: "Letter Gothic STD", "letter-gothic-std", "helvetica-nue", helvetica, arial, sans-serif;
+	text-align: center;
+	overflow: auto;
+	background: #131615 url('@{imgUrl}chalkboard.png');
+}
 
-	.box-shadow(0 8px 0 0px rgba(0, 0, 0, 0.3));
+.navigation {
+	padding: 16px;
+	background: #131615 url('@{imgUrl}chalkboard.png');
+}
+
+.main-nav {
+	position: relative;
 
 	.logo {
+		position: relative;
 		display: block;
-		width: 288px;
-		height: 78px;
-		background: transparent url('@{imgUrl}beachesLogo.png') top left no-repeat;
-		.background-size(100%, 100%);
-
+		height: 64px;
+		padding: 12px;
 		.transition(all .3s);
+
+		&:before {
+			content:'';
+			position: absolute;
+			top: 12px;
+			right: 12px;
+			bottom: 12px;
+			left: 12px;
+			background: transparent url('@{imgUrl}beachesLogo.png') top left no-repeat;
+			.background-size(100%, 100%);
+		}
 	}
 
-	.menu-button-button {
+	.menu-button {
 		display: none;
 	}
 
 	.nav {
-		label {
-			display: none;
+		margin: 16px 0;
+		padding: 8px;
+		border: 2px solid rgba(255, 255, 255, .5);
+		border-left: none;
+		border-right: none;
+
+		.nav-item {
+			margin: 0;
+			padding: 8px 12px;
+			height: 16px;
+			font-size: 16px;
+			line-height: 20px;
+			text-transform: uppercase;
+
+			&.active {
+				background: #FFF url('@{imgUrl}chalkboard.png');
+				color: #131615;
+			}
 		}
-		a {
+	}
+}
+
+.nav-item {
+	display: inline-block;
+	height: 20px;
+	margin: -1px;
+	padding: 4px 8px;
+	line-height: 24px;
+	color: #F0F0F0;
+	font-size: 12px;
+	cursor: pointer;
+	text-transform: lowercase;
+	text-decoration: none;
+	border: 1px solid transparent;
+
+	&:hover {
+		color: #FFF;
+		text-decoration: underline;
+	}
+
+	&.active {
+		color: #FFF;
+		border-color: #FFF;
+
+		&:hover {
 			text-decoration: none;
 		}
 	}
+}
 
-	.nav-item {
-		display: block;
-		float: left;
-		height: 30px;
-		padding: 0 8px;
-		margin: 0 4px;
-		line-height: 34px;
-		color: #FFF;
-		text-transform: uppercase;
-		font-family: "Letter Gothic STD", "letter-gothic-std", "helvetica-nue", helvetica, arial, sans-serif;
-		cursor: pointer;
-		border: 1px solid transparent;
+.social-links {
+	margin: 16px auto;
+  	// width: 160px;
+}
 
-		&:hover {
-			text-decoration: underline;
-		}
+.social-icon {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	padding: 8px;
+	margin: 4px;
+	cursor: pointer;
+	color: #FFF;
+	font-size: 16px;
+	text-decoration: none;
+	border: 1px solid transparent;
+	opacity: .75;
 
-		&.active {
-			border-color: #FFF;
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
-
-		&:last-child {
-			margin-right: 0;
-		}
+	&:hover {
+		opacity: .95;
+		border-color: #FFF;
+		//color: @lightblack;
 	}
+}
 
-	.main-nav {
-		position: absolute;
-		top: 24px;
-		right: 174px;
+.nav-label {
+	display: block;
+	margin: 36px auto 12px;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
 
-		.transition(left .3s);
-	}
+	&:after,
+	&:before {
+		content: '';
+		display: inline-block;
+		width: 10px;
+		height: 0;
+		margin: 3px 8px;
+		border-top: 4px double #FFF;
+		border-top-color: rgba(255, 255, 255, 0.5);
 
-	.restaurant-nav {
-		position: absolute;
-		top: 64px;
-		right: 25px;
 
-		.nav-item {
-			height: 27px;
-			padding: 4px 8px;
-			font-size: 26px;
-			// font-family: "Proxima Nova Extra Condensed", "proxima-nova-extra-condensed";
-			border-width: 1px;
-			.transition(all .3s);
-		}
-	}
-
-	.social-nav {
-		position: absolute;
-		top: 25px;
-		right: 25px;
-
-		a {
-			display: block;
-			width: 16px;
-			height: 16px;
-			padding: 7px;
-			margin: 0 0 4px 4px;
-			float: left;
-			cursor: pointer;
-			color: #FFF;
-			font-size: 16px;
-			border: 1px solid #FFF;
-			opacity: .75;
-
-			&:hover {
-				opacity: .95;
-				background: #FFF;
-				color: @lightblack;
-			}
-		}
 	}
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 2)
 {
 	header {
-		.logo {
+		.logo:before {
 			background-image: url('@{imgUrl}beachesLogo@2x.png');
-			.background-size(100%, 100%);
 		}
 	}
 }
@@ -237,69 +266,6 @@ header {
 			.box-shadow(0 0 0 0px rgba(0, 0, 0, 0.3));
 
 			.transition(all .3s);
-
-			> div {
-				position: static;
-				width: 240px;
-				float: right;
-				text-align: center;
-				padding-top: 16px;
-
-				.nav-item {
-					float: none;
-					width: 100px;
-					margin: 0 auto;
-				}
-
-
-				&.restaurant-nav {
-					left: 0;
-					margin-top: 0;
-					.nav-item {
-						width: 140px;
-						padding: 8px 12px;
-					}
-				}
-
-				&.social-nav {
-
-					a {
-						display: inline-block;
-						float: none;
-						font-size: 20px;
-						width: 20px;
-						height: 20px;
-						padding: 10px;
-
-						&:first-child {
-							margin-left: 0;
-						}
-					}
-				}
-
-				&.main-nav {
-					left: 0;
-				}
-			}
-
-			label {
-				display: block;
-				width: 170px;
-				height: 0px;
-				margin: 24px auto;
-				text-align: center;
-				border-top: 4px double #FFF;
-
-				span {
-					display: inline-block;
-					position: relative;
-					top: -14px;
-					padding: 12px;
-					color: #FFF;
-					line-height: 0;
-					background: @lightblack;
-				}
-			}
 		}
 
 		&.showMenu {

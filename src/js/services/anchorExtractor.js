@@ -12,14 +12,14 @@
 				{
 					el = angular.element(el);
 					var title = el.text(),
-						id = pageId + title.replace(' ', '');
+						id = pageId + title.replace(/[^a-zA-Z\d]/g, '');
 
 					el.attr('id', id);
 
 					menus.push({
 						title: title,
 						id: id,
-						sections: extractor.getMenuSections(pageId, el.next('.fdm-menu'))
+						sections: extractor.getMenuSections(id, el.nextAll('.fdm-menu').first())
 					});
 				});
 
@@ -32,11 +32,11 @@
 				{
 					el = angular.element(el);
 					var title = el.text(),
-						id = pageId + title.replace(' ', '');
+						id = pageId + title.replace(/[^a-zA-Z\d]/g, '');
 
 					el.attr('id', id);
 
-					menus.push({
+					sections.push({
 						title: title,
 						id: id
 					});
