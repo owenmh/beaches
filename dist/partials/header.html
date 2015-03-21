@@ -6,17 +6,12 @@
 				<span class='icon-menu'></span>
 				<span class='icon-close'></span>
 			</a>
-			<span class='btn btn-hover'>
-				{{currentSection()}}
-				<span class='icon-arrow-down'></span>
-				<select ng-options="item.link as item.label for item in navItems.main track by item.link" ng-model="activeSection" ng-change='navigateToSection(activeSection)'></select>
-			</span>
-			<div class='nav'>
-				<a class='nav-item' ng-repeat='item in navItems.main'  ng-href='#/{{item.link}}' ng-class='{active: item.link == currentSection()}'>{{item.label}}</a>
-			</div>
 		</div>
 		<div class='overlay' ng-click='toggleMobileMenu()'></div>
 		<div class='page-nav'>
+			<div class='nav'>
+				<a class='nav-item' ng-repeat='item in navItems.main'  ng-href='#/{{item.link}}' ng-class='{active: item.link == currentSection()}'>{{item.label}}</a>
+			</div>
 			<div class='social-links'>
 				<a class='social-icon' ng-repeat='item in navItems.social' ng-href='{{item.link}}' target="_blank">
 					<span ng-class='item.icon'></span>

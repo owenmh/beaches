@@ -545,20 +545,17 @@ header {
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
 }
-.main-nav .btn {
-  display: none;
-}
 .main-nav .menu-button {
   display: none;
 }
-.main-nav .nav {
+.page-nav .nav {
   margin: 16px 0;
   padding: 8px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-left: none;
   border-right: none;
 }
-.main-nav .nav .nav-item {
+.page-nav .nav .nav-item {
   margin: 0;
   padding: 8px 12px;
   height: 16px;
@@ -566,7 +563,7 @@ header {
   line-height: 20px;
   text-transform: uppercase;
 }
-.main-nav .nav .nav-item.active {
+.page-nav .nav .nav-item.active {
   background: #ffffff url('../img/chalkboard.png');
   color: #131615;
 }
@@ -658,9 +655,6 @@ header {
     width: auto;
     background: #131615 url('../img/chalkboard.png');
   }
-  header .main-nav .nav {
-    display: none;
-  }
   header .main-nav .logo {
     position: absolute;
     top: 4px;
@@ -700,39 +694,6 @@ header {
   }
   header .main-nav .menu-button:hover {
     opacity: .95;
-  }
-  header .main-nav .btn {
-    position: relative;
-    padding: 12px 16px;
-    display: inline-block;
-    height: 16px;
-    border: 1px solid transparent;
-    left: 7%;
-    text-transform: uppercase;
-  }
-  header .main-nav .btn:hover {
-    border-color: #FFF;
-  }
-  header .main-nav .btn .icon-arrow-down {
-    position: relative;
-    top: 2px;
-  }
-  header .main-nav .btn select {
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0);
-    border: 0;
-    opacity: 0;
   }
   header .overlay {
     position: fixed;

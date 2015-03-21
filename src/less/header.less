@@ -42,33 +42,29 @@ header {
 		}
 	}
 
-	.btn {
-		display: none;
-	}
-
 	.menu-button {
 		display: none;
 	}
+}
 
-	.nav {
-		margin: 16px 0;
-		padding: 8px;
-		border: 2px solid rgba(255, 255, 255, .5);
-		border-left: none;
-		border-right: none;
+.page-nav .nav {
+	margin: 16px 0;
+	padding: 8px;
+	border: 2px solid rgba(255, 255, 255, .5);
+	border-left: none;
+	border-right: none;
 
-		.nav-item {
-			margin: 0;
-			padding: 8px 12px;
-			height: 16px;
-			font-size: 16px;
-			line-height: 20px;
-			text-transform: uppercase;
+	.nav-item {
+		margin: 0;
+		padding: 8px 12px;
+		height: 16px;
+		font-size: 16px;
+		line-height: 20px;
+		text-transform: uppercase;
 
-			&.active {
-				background: #FFF url('@{imgUrl}chalkboard.png');
-				color: #131615;
-			}
+		&.active {
+			background: #FFF url('@{imgUrl}chalkboard.png');
+			color: #131615;
 		}
 	}
 }
@@ -180,10 +176,6 @@ header {
 			width: auto;
 			background: #131615 url('@{imgUrl}chalkboard.png');
 
-			.nav {
-				display: none;
-			}
-
 			.logo {
 				position: absolute;
 				top: 4px;
@@ -222,43 +214,6 @@ header {
 
 				&:hover {
 					opacity: .95;
-				}
-			}
-
-			.btn {
-				position: relative;
-				padding: 12px 16px;
-				display: inline-block;
-				height: 16px;
-				border: 1px solid transparent;
-				left: 7%;
-				text-transform: uppercase;
-
-				&:hover {
-					border-color: #FFF;
-				}
-
-				.icon-arrow-down {
-					position: relative;
-					top: 2px;
-				}
-
-				select {
-					position: absolute;
-				 	display: block;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					width: 100%;
-					height: 40px;
-					line-height: 1;
-					margin: 0;
-					padding: 0;
-					cursor: pointer;
-					background: rgba(0, 0, 0, 0);
-					border: 0;
-					opacity: 0;
 				}
 			}
 		}
