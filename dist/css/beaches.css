@@ -113,130 +113,263 @@ section {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-circle:before {
-  content: "\e600";
-}
 .icon-close:before,
 .icon-cross:before {
+  content: "\e600";
+}
+.icon-menu:before {
   content: "\e601";
 }
-.icon-book:before {
+.icon-arrow-left:before {
   content: "\e602";
 }
-.icon-minus:before {
+.icon-arrow-right:before {
   content: "\e603";
 }
-.icon-plus:before,
-.icon-link:before {
+.icon-arrow-up:before {
   content: "\e604";
 }
-.icon-search:before {
+.icon-arrow-down:before {
   content: "\e605";
 }
-.icon-arrow-down:before {
+.icon-expand:before,
+.icon-resize-enlarge:before {
   content: "\e606";
 }
-.icon-arrow-up:before {
+.icon-search:before {
   content: "\e607";
 }
-.icon-arrow-left:before {
+.icon-user:before {
   content: "\e608";
 }
-.icon-arrow-right:before {
+.icon-clock:before {
   content: "\e609";
 }
-.icon-clock:before {
+.icon-comments:before {
   content: "\e60a";
 }
-.icon-comments:before {
+.icon-category:before {
   content: "\e60b";
+}
+.icon-tag:before {
+  content: "\e60c";
 }
 .icon-refresh:before,
 .icon-cycle:before {
-  content: "\e60c";
-}
-.icon-lock:before {
   content: "\e60d";
 }
-.icon-resize-enlarge:before {
+.icon-facebook:before {
   content: "\e60e";
 }
-.icon-play:before {
+.icon-twitter:before {
   content: "\e60f";
 }
-.icon-pause:before {
+.icon-googleplus:before {
   content: "\e610";
 }
-.icon-stop:before {
+.icon-mail:before {
   content: "\e611";
 }
-.icon-facebook:before {
+.icon-youtube:before {
   content: "\e612";
 }
-.icon-twitter:before {
+.icon-pinterest:before {
   content: "\e613";
 }
-.icon-googleplus:before {
+.icon-vimeo:before {
   content: "\e614";
 }
-.icon-mail:before {
+.icon-instagram:before {
   content: "\e615";
 }
-.icon-youtube:before {
+.icon-dribbble:before {
   content: "\e616";
 }
-.icon-vimeo:before {
+.icon-flickr:before {
   content: "\e617";
 }
-.icon-pinterest:before {
+.icon-tumblr:before {
   content: "\e618";
 }
-.icon-instagram:before {
+.icon-linkedin:before {
   content: "\e619";
 }
-.icon-dribbble:before {
+.icon-github:before {
   content: "\e61a";
 }
-.icon-flickr:before {
+.icon-skype:before {
   content: "\e61b";
 }
-.icon-tumblr:before {
+.icon-soundcloud:before {
   content: "\e61c";
 }
-.icon-linkedin:before {
+.icon-envato:before {
   content: "\e61d";
 }
-.icon-github:before {
+.icon-location:before {
   content: "\e61e";
 }
-.icon-skype:before {
+.icon-phone:before {
   content: "\e61f";
 }
-.icon-soundcloud:before {
+.icon-share:before {
   content: "\e620";
 }
-.icon-envato:before {
+.icon-play:before {
   content: "\e621";
 }
-.icon-user:before {
+.icon-pause:before {
   content: "\e622";
 }
-.icon-calendar:before {
+.icon-stop:before {
   content: "\e623";
 }
-.icon-tripadvisor:before {
+.icon-link:before {
   content: "\e624";
 }
-.icon-location:before {
+@font-face {
+  font-family: 'AM Icons';
+  src: url('../fonts/am-icons.eot');
+  src: url('../fonts/am-icons.eot') format('embedded-opentype'), url('../fonts/am-icons.woff') format('woff'), url('../fonts/am-icons.ttf') format('truetype'), url('../fonts/am-icons.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="am-icon-"]:before,
+[class*=" am-icon-"]:before {
+  font-family: 'AM Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.am-icon-circle:before {
+  content: "\e600";
+}
+.am-icon-close:before,
+.am-icon-cross:before {
+  content: "\e601";
+}
+.am-icon-book:before {
+  content: "\e602";
+}
+.am-icon-minus:before {
+  content: "\e603";
+}
+.am-icon-plus:before,
+.am-icon-link:before {
+  content: "\e604";
+}
+.am-icon-search:before {
+  content: "\e605";
+}
+.am-icon-arrow-down:before {
+  content: "\e606";
+}
+.am-icon-arrow-up:before {
+  content: "\e607";
+}
+.am-icon-arrow-left:before {
+  content: "\e608";
+}
+.am-icon-arrow-right:before {
+  content: "\e609";
+}
+.am-icon-clock:before {
+  content: "\e60a";
+}
+.am-icon-comments:before {
+  content: "\e60b";
+}
+.am-icon-refresh:before,
+.am-icon-cycle:before {
+  content: "\e60c";
+}
+.am-icon-lock:before {
+  content: "\e60d";
+}
+.am-icon-resize-enlarge:before {
+  content: "\e60e";
+}
+.am-icon-play:before {
+  content: "\e60f";
+}
+.am-icon-pause:before {
+  content: "\e610";
+}
+.am-icon-stop:before {
+  content: "\e611";
+}
+.am-icon-facebook:before {
+  content: "\e612";
+}
+.am-icon-twitter:before {
+  content: "\e613";
+}
+.am-icon-googleplus:before {
+  content: "\e614";
+}
+.am-icon-mail:before {
+  content: "\e615";
+}
+.am-icon-youtube:before {
+  content: "\e616";
+}
+.am-icon-vimeo:before {
+  content: "\e617";
+}
+.am-icon-pinterest:before {
+  content: "\e618";
+}
+.am-icon-instagram:before {
+  content: "\e619";
+}
+.am-icon-dribbble:before {
+  content: "\e61a";
+}
+.am-icon-flickr:before {
+  content: "\e61b";
+}
+.am-icon-tumblr:before {
+  content: "\e61c";
+}
+.am-icon-linkedin:before {
+  content: "\e61d";
+}
+.am-icon-github:before {
+  content: "\e61e";
+}
+.am-icon-skype:before {
+  content: "\e61f";
+}
+.am-icon-soundcloud:before {
+  content: "\e620";
+}
+.am-icon-envato:before {
+  content: "\e621";
+}
+.am-icon-user:before {
+  content: "\e622";
+}
+.am-icon-calendar:before {
+  content: "\e623";
+}
+.am-icon-tripadvisor:before {
+  content: "\e624";
+}
+.am-icon-location:before {
   content: "\e625";
 }
-.icon-phone:before {
+.am-icon-phone:before {
   content: "\e626";
 }
-.icon-foursquare:before {
+.am-icon-foursquare:before {
   content: "\e627";
 }
-.icon-yelp:before {
+.am-icon-yelp:before {
   content: "\e628";
 }
 body,
@@ -398,11 +531,6 @@ header {
   display: block;
   height: 64px;
   padding: 12px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
 }
 .main-nav .logo:before {
   content: '';
@@ -416,6 +544,9 @@ header {
   -moz-background-size: 100% 100%;
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
+}
+.main-nav .btn {
+  display: none;
 }
 .main-nav .menu-button {
   display: none;
@@ -505,59 +636,44 @@ header {
     background-image: url('../img/beachesLogo@2x.png');
   }
 }
-/* smaller browser, let's shrink the header */
-@media screen and (max-width: 854px) {
-  header {
-    height: 64px;
-  }
-  header .logo {
-    height: 64px;
-    width: 237px;
-  }
-  header .nav-item {
-    margin: 0;
-  }
-  header .main-nav {
-    top: 22px;
-    right: 106px;
-  }
-  header .restaurant-nav {
-    top: 59px;
-    right: 106px;
-  }
-  header .restaurant-nav .nav-item {
-    height: 21px;
-    font-size: 20px;
-    line-height: 26px;
-  }
-  header .social-nav {
-    top: 22px;
-    width: 72px;
-  }
-}
 /* too small for a normal header, so show hamberger style */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 690px) {
   body {
-    margin-top: 76px;
+    margin-top: 74px;
   }
   header {
+    position: static;
+  }
+  header .navigation {
+    padding: 0;
+  }
+  header .main-nav {
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
-    height: 44px;
-    padding: 16px;
-  }
-  header .logo {
     height: 42px;
-    width: 154px;
+    padding: 16px;
+    width: auto;
+    background: #131615 url('../img/chalkboard.png');
   }
-  header .menu-button {
+  header .main-nav .nav {
+    display: none;
+  }
+  header .main-nav .logo {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    padding: 0;
+    width: 170px;
+    height: 66px;
+  }
+  header .main-nav .menu-button {
     position: absolute;
     top: 16px;
     right: 16px;
     display: block;
-    float: right;
     width: 18px;
     height: 18px;
     padding: 11px;
@@ -566,8 +682,9 @@ header {
     cursor: pointer;
     border: 1px solid #FFF;
     opacity: .85;
+    z-index: 1;
   }
-  header .menu-button span {
+  header .main-nav .menu-button span {
     opacity: 1;
     -webkit-transition: opacity 0.3s;
     -moz-transition: opacity 0.3s;
@@ -575,18 +692,52 @@ header {
     -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
   }
-  header .menu-button .icon-close {
+  header .main-nav .menu-button .icon-close {
     position: absolute;
     top: 11px;
     right: 11px;
     opacity: 0;
   }
-  header .menu-button:hover {
+  header .main-nav .menu-button:hover {
     opacity: .95;
+  }
+  header .main-nav .btn {
+    position: relative;
+    padding: 12px 16px;
+    display: inline-block;
+    height: 16px;
+    border: 1px solid transparent;
+    left: 7%;
+    text-transform: uppercase;
+  }
+  header .main-nav .btn:hover {
+    border-color: #FFF;
+  }
+  header .main-nav .btn .icon-arrow-down {
+    position: relative;
+    top: 2px;
+  }
+  header .main-nav .btn select {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0);
+    border: 0;
+    opacity: 0;
   }
   header .overlay {
     position: fixed;
-    top: 0;
+    z-index: 1;
+    top: 74px;
     right: 0;
     bottom: 0;
     left: 0;
@@ -599,9 +750,10 @@ header {
     -o-transition: opacity 0.3s, visibility 0s 0.3s;
     transition: opacity 0.3s, visibility 0s 0.3s;
   }
-  header .nav {
+  header .page-nav {
     position: fixed;
-    top: 0;
+    z-index: 1;
+    top: 74px;
     bottom: 0;
     left: 0;
     width: 0;
@@ -616,17 +768,18 @@ header {
     -o-transition: all 0.3s;
     transition: all 0.3s;
   }
+  header .page-nav > div {
+    width: 286px;
+    float: right;
+  }
   header.showMenu .menu-button .icon-menu {
     opacity: 0;
   }
   header.showMenu .menu-button .icon-close {
     opacity: 1;
   }
-  header.showMenu .nav {
-    width: 240px;
-    -webkit-box-shadow: 8px 0 0 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 8px 0 0 0px rgba(0, 0, 0, 0.3);
-    box-shadow: 8px 0 0 0px rgba(0, 0, 0, 0.3);
+  header.showMenu .page-nav {
+    width: 286px;
   }
   header.showMenu .overlay {
     visibility: visible;
@@ -707,9 +860,9 @@ header {
   color: #999;
   margin-bottom: 24px;
 }
-@media (max-width: 450px) {
-  .page-body {
-    margin: 0;
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 690px) {
+  .page-container {
+    margin-left: 0;
   }
 }
 
@@ -828,7 +981,7 @@ header {
   pointer-events: none;
   opacity: .5;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 420px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px), (max-width: 690px) {
   .slideshow {
     position: static;
   }

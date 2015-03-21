@@ -66,7 +66,7 @@
 						icon: 'icon-facebook',
 						link: 'http://www.facebook.com/home.php?#!/beachesrestaurantandbar?ref=ts'
 					},{
-						icon: 'icon-tripadvisor',
+						icon: 'am-icon-tripadvisor',
 						link: 'http://www.tripadvisor.com/Restaurant_Review-g60820-d490501-Reviews-Beaches_Restaurant_Bar-Vancouver_Washington.html'
 					},{
 						icon: 'icon-location',
@@ -91,6 +91,10 @@
 				getCurrentHash: function()
 				{
 					return $location.hash();
+				},
+				navToSection: function(section)
+				{
+					$location.url(section);
 				},
 				navToAnchor: function(id, opt_noScroll)
 				{

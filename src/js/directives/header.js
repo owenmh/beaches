@@ -26,7 +26,12 @@
 				link: function($scope)
 				{
 					angular.extend($scope, {
+						activeSection: headerService.getCurrentSection(),
 						navItems: headerService.navItems,
+						navigateToSection: function(section)
+						{
+							headerService.navToSection(section);
+						},
 						currentSection: function()
 						{
 							return headerService.getCurrentSection();
